@@ -62,6 +62,11 @@ PRODUCT_PACKAGES += \
     nos_app_keymaster:64 \
     nos_app_weaver:64
 
+# Overlays
+PRODUCT_PACKAGES += \
+    CustomFrameworksOverlayC10 \
+    CustomFrameworksOverlayP10
+
 # Telephony
 PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
