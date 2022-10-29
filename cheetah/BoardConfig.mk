@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-TARGET_BOARD_INFO_FILE := device/google/pantah/board-info.txt
+TARGET_BOARD_INFO_FILE := device/google/cheetah/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := cheetah
 TARGET_SCREEN_DENSITY := 560
 BOARD_USES_GENERIC_AUDIO := true
@@ -24,4 +24,6 @@ include device/google/gs201/BoardConfig-common.mk
 -include vendor/google_devices/gs201/prebuilts/BoardConfigVendor.mk
 -include vendor/google_devices/cheetah/proprietary/BoardConfigVendor.mk
 include device/google/pantah-sepolicy/cheetah-sepolicy.mk
-include device/google/pantah/wifi/BoardConfig-wifi.mk
+include device/google/cheetah/wifi/BoardConfig-wifi.mk
+
+include device/google/cheetah/cheetah/BoardConfig-custom.mk

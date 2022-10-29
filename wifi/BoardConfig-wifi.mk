@@ -32,6 +32,6 @@ WIFI_FEATURE_HOSTAPD_11AX := true
 BOARD_HOSTAPD_CONFIG_80211W_MFP_OPTIONAL := true
 
 PRODUCT_COPY_FILES += \
-    device/google/pantah/wifi/p2p_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant.conf \
-    device/google/pantah/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+    device/google/cheetah/wifi/p2p_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant.conf \
+    device/google/cheetah/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 

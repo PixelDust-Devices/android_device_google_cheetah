@@ -17,8 +17,8 @@
 TARGET_LINUX_KERNEL_VERSION := 5.10
 
 $(call inherit-product, device/google/gs201/factory_common.mk)
-$(call inherit-product, device/google/pantah/device-cloudripper.mk)
-include device/google/pantah/audio/cloudripper/factory-audio-tables.mk
+$(call inherit-product, device/google/cheetah/device-cloudripper.mk)
+include device/google/cheetah/audio/cloudripper/factory-audio-tables.mk
 
 PRODUCT_NAME := factory_cloudripper
 PRODUCT_DEVICE := cloudripper
