@@ -13,3 +13,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+BUILD_BROKEN_DUP_SYSPROP := true
