@@ -16,7 +16,7 @@
 # UWB - ultra wide band
 $(call inherit-product-if-exists, vendor/qorvo/uwb/uwb.mk)
 
-LOCAL_UWB_CAL_DIR=device/google/pantah/uwb
+LOCAL_UWB_CAL_DIR=device/google/cheetah/uwb
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_UWB_CAL_DIR)/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration.conf \

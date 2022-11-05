@@ -21,7 +21,7 @@ BOARD_USES_SWIFTSHADER := true
 BOARD_WITHOUT_RADIO := true
 
 $(call inherit-product, device/google/gs201/aosp_common.mk)
-$(call inherit-product, device/google/pantah/device-ravenclaw.mk)
+$(call inherit-product, device/google/cheetah/device-ravenclaw.mk)
 
 PRODUCT_NAME := aosp_ravenclaw
 PRODUCT_DEVICE := ravenclaw
@@ -30,4 +30,4 @@ PRODUCT_BRAND := Android
 PRODUCT_MANUFACTURER := Google
 
 DEVICE_MANIFEST_FILE := \
-	device/google/pantah/manifest.xml
+	device/google/cheetah/manifest.xml

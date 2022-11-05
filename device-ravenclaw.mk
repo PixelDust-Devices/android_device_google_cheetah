@@ -23,13 +23,13 @@ $(call inherit-product-if-exists, vendor/google_devices/gs201/proprietary/device
 $(call inherit-product-if-exists, vendor/google_devices/pantah/proprietary/ravenclaw/device-vendor-ravenclaw.mk)
 
 include device/google/gs201/device-shipping-common.mk
-include device/google/pantah/audio/ravenclaw/audio-tables.mk
+include device/google/cheetah/audio/ravenclaw/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs101/bluetooth/bluetooth.mk
 
 ifeq ($(filter factory_ravenclaw, $(TARGET_PRODUCT)),)
 include device/google/gs101/uwb/uwb.mk
-include device/google/pantah/uwb/uwb_calibration.mk
+include device/google/cheetah/uwb/uwb_calibration.mk
 endif
 
 $(call soong_config_set,lyric,tuning_product,cloudripper)
@@ -37,19 +37,19 @@ $(call soong_config_set,google3a_config,target_device,cloudripper)
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/google/pantah/conf/init.ravenclaw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.ravenclaw.rc
+	device/google/cheetah/conf/init.ravenclaw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.ravenclaw.rc
 
 # Recovery files
 PRODUCT_COPY_FILES += \
-        device/google/pantah/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.ravenclaw.rc
+        device/google/cheetah/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.ravenclaw.rc
 
 # insmod files
 PRODUCT_COPY_FILES += \
-	device/google/pantah/init.insmod.ravenclaw.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.ravenclaw.cfg
+	device/google/cheetah/init.insmod.ravenclaw.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.ravenclaw.cfg
 
 # Camera
 PRODUCT_COPY_FILES += \
-	device/google/pantah/media_profiles_ravenclaw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+	device/google/cheetah/media_profiles_ravenclaw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -59,8 +59,8 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
 	frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
 	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
-    device/google/pantah/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
-    device/google/pantah/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+    device/google/cheetah/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+    device/google/cheetah/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
 PRODUCT_PACKAGES += \
 	NfcNci \
@@ -75,31 +75,31 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
-	device/google/pantah/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf \
-	device/google/pantah/nfc/libse-gto-hal2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal2.conf
+	device/google/cheetah/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf \
+	device/google/cheetah/nfc/libse-gto-hal2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal2.conf
 
 DEVICE_MANIFEST_FILE += \
-	device/google/pantah/nfc/manifest_se.xml
+	device/google/cheetah/nfc/manifest_se.xml
 
 # Thermal Config
 PRODUCT_COPY_FILES += \
-	device/google/pantah/thermal_info_config_ravenclaw.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
-	device/google/pantah/thermal_info_config_proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_proto.json
+	device/google/cheetah/thermal_info_config_ravenclaw.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+	device/google/cheetah/thermal_info_config_proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_proto.json
 
 # Power HAL config
 PRODUCT_COPY_FILES += \
-	device/google/pantah/powerhint-ravenclaw.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+	device/google/cheetah/powerhint-ravenclaw.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Bluetooth HAL
 DEVICE_MANIFEST_FILE += \
-	device/google/pantah/bluetooth/manifest_bluetooth.xml
+	device/google/cheetah/bluetooth/manifest_bluetooth.xml
 PRODUCT_SOONG_NAMESPACES += \
         vendor/broadcom/bluetooth
 PRODUCT_PACKAGES += \
 	android.hardware.bluetooth@1.1-service.bcmbtlinux \
 	bt_vendor.conf
 PRODUCT_COPY_FILES += \
-	device/google/pantah/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
+	device/google/cheetah/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.a2dp_offload.supported=true \
     persist.bluetooth.a2dp_offload.disabled=false \
@@ -141,7 +141,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/pantah/powerstats/ravenclaw
+    device/google/cheetah/powerstats/ravenclaw
 
 # Fingerprint HAL
 GOODIX_CONFIG_BUILD_VERSION := g6_trusty
@@ -157,7 +157,7 @@ PRODUCT_PACKAGES += \
 	WifiOverlay2022_C10 \
 	PixelWifiOverlay2022_C10
 
-PRODUCT_SOONG_NAMESPACES += device/google/pantah/cheetah/
+PRODUCT_SOONG_NAMESPACES += device/google/cheetah/cheetah/
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/pantah/prebuilts
@@ -165,10 +165,10 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/pantah/prebuilts
 # Location
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
         PRODUCT_COPY_FILES += \
-                device/google/pantah/location/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+                device/google/cheetah/location/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 else
         PRODUCT_COPY_FILES += \
-                device/google/pantah/location/gps_user.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+                device/google/cheetah/location/gps_user.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
 
 # Set zram size

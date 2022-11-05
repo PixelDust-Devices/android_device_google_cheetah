@@ -17,8 +17,8 @@
 TARGET_LINUX_KERNEL_VERSION := 5.10
 
 $(call inherit-product, device/google/gs201/factory_common.mk)
-$(call inherit-product, device/google/pantah/device-ravenclaw.mk)
-include device/google/pantah/audio/ravenclaw/factory-audio-tables.mk
+$(call inherit-product, device/google/cheetah/device-ravenclaw.mk)
+include device/google/cheetah/audio/ravenclaw/factory-audio-tables.mk
 
 PRODUCT_NAME := factory_ravenclaw
 PRODUCT_DEVICE := ravenclaw
