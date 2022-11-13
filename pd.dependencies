@@ -1,0 +1,14 @@
+[
+    {
+        "target_path":  "device/google/pantah",
+        "repository":   "android_device_google_pantah",
+        "remote":       "pdd",
+        "revision":     "13"
+    },
+    {
+        "target_path":  "vendor/google/cheetah",
+        "repository":   "pixeldust-vendor/vendor_google_cheetah",
+        "remote":       "gitlab",
+        "revision":     "13"
+    }
+]
