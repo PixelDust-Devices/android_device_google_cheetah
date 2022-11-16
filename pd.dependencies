@@ -6,7 +6,7 @@
         "revision":     "13"
     },
     {
-        "target_path":  "vendor/google/cheetah",
+        "target_path":  "vendor/google",
         "repository":   "pixeldust-vendor/vendor_google_cheetah",
         "remote":       "gitlab",
         "revision":     "13"
